@@ -5,7 +5,7 @@ import ThemeList from '../../data/ThemeList';
 const ParagraphTextStyle = styled.p`
     font-size: 1.6rem;
     line-height: 1.4rem;
-    color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkBlue_1)' : 'var(--lightBlue_2)'};
+    color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkGreen_1)' : 'var(--lightGreen_2)'};
 
     @media only screen and (max-width: 768px) {
         font-size: 1.4rem;

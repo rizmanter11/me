@@ -12,13 +12,13 @@ import ThemeList from "../data/ThemeList";
 const GlobalStyles = createGlobalStyle`
     :root{
         /* colors */
-        --darkBlue_1: #009c84;
-        --darkBlue_2: #001a16;
-        --darkBlue_3: #111111;
-        --darkBlue_4: #101826;
-        --mediumSlateBlue: #00df9a;
-        --lightBlue_1: #fbfbfb;
-        --lightBlue_2: #80ffeb;
+        --darkGreen_1: #009c84;
+        --darkGreen_2: #001a16;
+        --darkGreen_3: #111111;
+        --darkGreen_4: #00332b;
+        --mediumSlateGreen: #00df9a;
+        --lightGreen_1: #fbfbfb;
+        --lightGreen_2: #80ffeb;
         --white: #FFFFFF;
         --black: #000000;
 
@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: 10px;
     }
     body{
-        background-color: ${({theme: {theme} }) => theme === ThemeList.light ? 'var(--lightBlue_1)': 'var(--darkBlue_3)'};
+        background-color: ${({theme: {theme} }) => theme === ThemeList.light ? 'var(--lightGreen_1)': 'var(--darkGreen_3)'};
         font-family: 'Poppins', sans-serif;
     }
     *, *::after, *::before{

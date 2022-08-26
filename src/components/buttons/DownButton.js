@@ -9,8 +9,9 @@ const DownButtonStyles = styled.a`
     margin-top: 1vh;
     cursor: pointer;
     border: none;
+
     svg{
-        color: var(--mediumSlateBlue);
+        color: var(--mediumSlateGreen);
     }
     &:hover{
         transform: scale(1.1);

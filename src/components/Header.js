@@ -12,12 +12,11 @@ const HeaderStyles = styled.header`
     left: 0;
     width: 100%;
     height: var(--header-height);
-    background-color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--lightBlue_1)' : 'var(--darkBlue_3)'};
-    //background: rgba(255, 255, 255, 0.2);
-    //backdrop-filter: blur(5px);
+    background-color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--lightGreen_1)' : 'var(--darkGreen_3)'};
     box-shadow: ${({theme: {theme}}) => theme === ThemeList.light ? "0 4px 30px rgba(0,0,0,0.1)" : "0 4px 30px rgba(255,255,255,0.1)"};
-    border-bottom: 1px solid var(--mediumSlateBlue);
-    
+    border-bottom: 1px solid var(--mediumSlateGreen);
+    z-index: 300;
+
     .navigation{
         display: flex;
         align-items: center;
@@ -40,11 +39,11 @@ const HeaderStyles = styled.header`
             font-weight: 500;
             display: inline-block;
             padding: 0.5rem 1rem;
-            color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
+            color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkGreen_2)' : 'var(--lightGreen_1)'};
         }
         &:hover {
             a{
-                color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkBlue_1)' : 'var(--lightBlue_2)'};
+                color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkGreen_1)' : 'var(--lightGreen_2)'};
             }
         }
     }
@@ -63,7 +62,7 @@ const HeaderStyles = styled.header`
         padding: 3px;
         border-radius: 4px;
         svg{
-            color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
+            color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkGreen_2)' : 'var(--lightGreen_1)'};
         }
         &:hover{
             background-color: #8080803b;
@@ -91,7 +90,7 @@ const HeaderStyles = styled.header`
             max-width: 250px;
             top: 0;
             right: 0;
-            background-color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--white)' : 'var(--darkBlue_4)'};
+            background-color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--white)' : 'var(--darkGreen_4)'};
             height: 100vh;
             z-index: 100;
             transform: translateX(100%);
@@ -144,7 +143,7 @@ function Header() {
                             )}
                             <ul>
                                 <li>
-                                    <Link to="home">Home</Link>
+                                    <Link to="hero">Home</Link>
                                 </li>
                                 <li>
                                     <Link to="about">About</Link>

@@ -46,7 +46,7 @@ const ThemeSwitcherStyles = styled.div`
         left: var(--gap);
         height: var(--size);
         width: var(--size);
-        background-color: var(--mediumSlateBlue);
+        background-color: var(--mediumSlateGreen);
         transition: 0.5s ease left;
         z-index: -1;
     }
