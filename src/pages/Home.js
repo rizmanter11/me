@@ -1,18 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import About from '../components/About'
 import Faq from '../components/Faq'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
 import Hero from '../components/Hero'
 
 function Home() {
+
+  useEffect(() => {
+    document.title = "Home | Riz Manter"
+  }, []);
+
   return (
     <div>
-        <Header/>
         <Hero/>
         <Faq/>
         <About/>
-        <Footer/>
     </div>
   )
 }

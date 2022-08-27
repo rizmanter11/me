@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import AboutImg from '../assets/images/about.png';
 import ThemeList from '../data/ThemeList';
@@ -36,15 +37,15 @@ const AboutStyles = styled.div`
 
 	.about_title{
 		font-size: 4rem;
-        font-weight: 800;
-        color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkGreen_2)' : 'var(--lightGreen_1)'};
-        text-transform: capitalize;
-        margin-bottom: 2rem;
+		font-weight: 800;
+		color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkGreen_2)' : 'var(--lightGreen_1)'};
+		text-transform: capitalize;
+		margin-bottom: 2rem;
 		max-width: 300px;
 
-        @media only screen and (max-width: 768px){
-            font-size: 3rem;
-        }
+		@media only screen and (max-width: 768px){
+			font-size: 3rem;
+		}
 	}
 
 	.about_desc{
@@ -78,7 +79,7 @@ function About() {
               I am an aspiring Software Developer with hands on experience in front and back-end development.
               I love hiking, especially with friends and can be seen watching Studio Ghibli movies occassionally.
             </p>
-            <PrimaryButton>Read More</PrimaryButton>
+            <PrimaryButton buttonType={NavLink} to="/about">Read More</PrimaryButton>
           </div>
         </div>
       </div>

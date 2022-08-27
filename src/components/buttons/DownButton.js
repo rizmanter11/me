@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import ThemeList from '../../data/ThemeList';
 
 const DownButtonStyles = styled.a`
     display: inline-block;

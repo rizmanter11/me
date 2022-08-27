@@ -2,12 +2,11 @@ import React from 'react'
 import rmlogo from '../assets/images/rmlogo.png'
 import {AiFillGithub, AiFillLinkedin, AiFillMail} from 'react-icons/ai'
 import styled from 'styled-components'
-import { Link } from 'react-scroll';
-import ThemeList from '../data/ThemeList';
+import { NavLink } from 'react-router-dom';
 
 const FooterStyles = styled.footer`
     background-color: black;
-    padding: 10rem 0;
+    padding: 6rem 0;
 
     .footer_wrapper{
         text-align: center;
@@ -61,10 +60,9 @@ function Footer() {
     <FooterStyles>
         <div className="container">
             <div className="footer_wrapper">
-                <a href="#hero">
-                    {/*change to link to home when mult pages*/}
+                <NavLink to="/">
                     <img className="footer_logo" src={rmlogo} alt="RM-LOGO"/>
-                </a>
+                </NavLink>
                 <div className="footer_links">
                     <ul>
                         <li>

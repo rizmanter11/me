@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-scroll'
 import styled from 'styled-components'
 import ThemeSwitcher from './ThemeSwitcher';
 import { FiMenu, FiX } from 'react-icons/fi';
 import ThemeList from '../data/ThemeList';
 import rmlogo from '../assets/images/rmlogo.png'
+import { NavLink } from 'react-router-dom';
 
 const HeaderStyles = styled.header`
     position: fixed;
@@ -127,13 +127,15 @@ function Header() {
                 window.matchMedia('(max-width: 768px)').matches
             )
         })
-    }, []);   
+    }, []);
 
     return (
         <HeaderStyles>
             <div className="container">
                 <div className="navigation">
-                    <img src={rmlogo} alt="RM-LOGO"/>
+                    <NavLink to="/">
+                        <img src={rmlogo} alt="RM-LOGO"/>
+                    </NavLink>
                     <div className="navMenu">
                         <nav className={isMobile && isNavOpen ? 'open': undefined}>
                             {isMobile && (
@@ -143,16 +145,16 @@ function Header() {
                             )}
                             <ul>
                                 <li>
-                                    <Link to="hero">Home</Link>
+                                    <NavLink to="/">Home</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="about">About</Link>
+                                    <NavLink to="/about">About</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="projects">Projects</Link>
+                                    <NavLink to="/projects">Projects</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="contact">Contact</Link>
+                                    <NavLink to="/contact">Contact</NavLink>
                                 </li>
                             </ul>
                         </nav>
