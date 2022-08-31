@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import projectImg from '../assets/images/achromex.png'
 import ThemeList from '../data/ThemeList';
 
 const ProjectItemStyles = styled.div`

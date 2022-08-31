@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import ThemeSwitcher from './ThemeSwitcher';
 import { FiMenu, FiX } from 'react-icons/fi';
@@ -33,7 +33,7 @@ const HeaderStyles = styled.header`
 
     nav ul li{
         display: inline-block;
-        margin: 0 1rem;
+        margin: 0 1.5rem;
         a {
             font-size: 2rem;
             font-weight: 500;
@@ -45,6 +45,9 @@ const HeaderStyles = styled.header`
             a{
                 color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkGreen_1)' : 'var(--lightGreen_2)'};
             }
+        } 
+        a.active {
+            text-decoration: underline;
         }
     }
 
@@ -80,6 +83,16 @@ const HeaderStyles = styled.header`
         }
     }
 
+    .navOverlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--darkGreen_3);
+        opacity: 0.4;
+    }
+
     @media only screen and (max-width: 768px){
         nav {
             display: flex;
@@ -94,11 +107,12 @@ const HeaderStyles = styled.header`
             height: 100vh;
             z-index: 100;
             transform: translateX(100%);
-            transition: 0.3s ease transform;
+            transition: 0.3s ease-in-out transform;
             overflow: hidden;
         }
 
         nav.open{
+            box-shadow: -1px 4px 10px 3px rgb(0 0 0 / 16%);
             transform: translateX(0);
         }
 
@@ -116,17 +130,40 @@ const HeaderStyles = styled.header`
 `;
 
 function Header() {
+    const headerRef = useRef(null);
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(
         window.matchMedia('(max-width: 768px)').matches
     );
 
     useEffect(() => {
+        function disableScroll() {
+          document.body.style.overflow = 'hidden';
+        }
+        function enableScroll() {
+          document.body.style.overflow = '';
+        }
+    
+        if (isNavOpen) {
+          disableScroll();
+        } else {
+          enableScroll();
+        }
+    }, [isNavOpen]);
+
+    useEffect(() => {
         window.addEventListener('resize', () => {
             setIsMobile(
                 window.matchMedia('(max-width: 768px)').matches
             )
-        })
+        });
+
+        window.addEventListener('scroll', () => {
+            if (headerRef.current && window.scrollY > 100) {
+              headerRef.current.style.boxShadow =
+                '0px 0px 10px 0px rgba(0, 0, 0, 0.5)';
+            }
+        });
     }, []);
 
     return (
@@ -158,6 +195,16 @@ function Header() {
                                 </li>
                             </ul>
                         </nav>
+                        {isNavOpen && (
+                            <div
+                                className="navOverlay"
+                                tabIndex="0"
+                                aria-label="overlay"
+                                role="button"
+                                onKeyDown={() => setIsNavOpen(false)}
+                                onClick={() => setIsNavOpen(false)}
+                            />
+                        )}
                         <ThemeSwitcher/>
                         {isMobile && (
                             <div className="menuIcon" tabIndex="0" role="button" onClick={() => setIsNavOpen(true)} onKeyDown={() => setIsNavOpen(true)}>

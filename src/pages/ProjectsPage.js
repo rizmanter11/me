@@ -77,7 +77,7 @@ function ProjectsPage() {
   return (
     <ProjectsPageStyle>
       <div className="container">
-        <p className='proj_sub'>Some of my recent projects</p>
+        <p className='proj_sub'>Some of my recent works</p>
         <h3 className='proj_title'>Projects</h3>
         <div className="project_allItems">
             <Swiper
@@ -100,7 +100,6 @@ function ProjectsPage() {
               }}
             >
               {projects.map((project, index) => {
-                if(index >= 5) return;
                 return (
                   <SwiperSlide key={project.id}>
                     <ProjectItem
