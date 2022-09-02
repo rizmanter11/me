@@ -20,7 +20,7 @@ const FaqStyles = styled.div`
     .faq_title{
         font-size: 4rem;
         font-weight: 800;
-        color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkGreen_2)' : 'var(--lightGreen_1)'};
+        color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkGreen_4)' : 'var(--lightGreen_1)'};
         text-transform: capitalize;
         margin-bottom: 3rem;
         @media only screen and (max-width: 768px){

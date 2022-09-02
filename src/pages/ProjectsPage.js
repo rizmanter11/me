@@ -6,6 +6,7 @@ import ProjectItem from '../components/ProjectItem.js';
 import projects from '../data/ProjectsData.js';
 import 'swiper/css/bundle';
 import ThemeList from '../data/ThemeList.js';
+import { useEffect } from 'react';
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -74,6 +75,10 @@ const ProjectsPageStyle = styled.div`
 `;
 
 function ProjectsPage() {
+  useEffect(() => {
+		document.title = "Projects | Riz Manter"
+	}, []);
+  
   return (
     <ProjectsPageStyle>
       <div className="container">

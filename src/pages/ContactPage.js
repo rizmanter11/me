@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import PrimaryButton from '../components/buttons/PrimaryButton';
 import FormField from '../components/FormField';
@@ -59,6 +60,10 @@ const ContactPageStyles = styled.div`
 `;
 
 function ContactPage() {
+  useEffect(() => {
+		document.title = "Contact | Riz Manter"
+	}, []);
+
   return (
     <ContactPageStyles id="contact">
       <div className="container">

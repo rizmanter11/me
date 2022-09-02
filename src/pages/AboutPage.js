@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PrimaryButton from '../components/buttons/PrimaryButton';
 import about_2 from '../assets/images/about-2.png';
 import styled from 'styled-components';
@@ -63,6 +63,10 @@ const AboutPageStyles = styled.div`
 `;
 
 function AboutPage() {
+
+	useEffect(() => {
+		document.title = "About | Riz Manter"
+	}, []);
   return (
     <AboutPageStyles>
         <div className="container">
