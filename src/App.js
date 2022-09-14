@@ -22,10 +22,10 @@ function App() {
           <Header />
           <ScrollToTop />
           <Routes>
-            <Route path="/about" element={<AboutPage/>}/>
-            <Route path="/contact" element={<ContactPage/>}/>
-            <Route path="/projects" element={<ProjectsPage/>}/>
-            <Route path="/" element={<Home/>}/>
+            <Route path="/me/about" element={<AboutPage/>}/>
+            <Route path="/me/contact" element={<ContactPage/>}/>
+            <Route path="/me/projects" element={<ProjectsPage/>}/>
+            <Route path="/me" element={<Home/>}/>
           </Routes>
           <Footer />
         </Router>
