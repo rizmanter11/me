@@ -170,7 +170,7 @@ function Header() {
         <HeaderStyles>
             <div className="container">
                 <div className="navigation">
-                    <NavLink to="/">
+                    <NavLink to="/me">
                         <img src={rmlogo} alt="RM-LOGO"/>
                     </NavLink>
                     <div className="navMenu">
@@ -182,7 +182,7 @@ function Header() {
                             )}
                             <ul>
                                 <li>
-                                    <NavLink to="/">Home</NavLink>
+                                    <NavLink to="/me">Home</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/about">About</NavLink>
