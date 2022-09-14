@@ -57,9 +57,19 @@ const AboutPageStyles = styled.div`
 		}
 	}
 
-	.right{
-
-	}
+	@media only screen and (max-width: 768px) {
+   		padding: 10rem 0;
+		.top-section {
+			flex-direction: column;
+			gap: 5rem;
+		}
+		.about_subheading {
+			font-size: 1.8rem;
+		}
+		.about_heading {
+			font-size: 2.8rem;
+		}
+  	}
 `;
 
 function AboutPage() {

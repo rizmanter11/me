@@ -13,7 +13,7 @@ const HeaderStyles = styled.header`
     width: 100%;
     height: var(--header-height);
     background-color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--lightGreen_1)' : 'var(--darkGreen_3)'};
-    box-shadow: ${({theme: {theme}}) => theme === ThemeList.light ? "0 4px 30px rgba(0,0,0,0.1)" : "0 4px 30px rgba(255,255,255,0.1)"};
+    box-shadow: ${({theme: {theme}}) => theme === ThemeList.light ? "0 4px 30px rgba(0,0,0,0.1)" : "0 4px 30px rgba(255,255,255,0.2)"};
     border-bottom: 1px solid var(--mediumSlateGreen);
     z-index: 300;
 
