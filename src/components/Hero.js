@@ -65,6 +65,12 @@ const HeroStyles = styled.header`
         padding-left: 5px;
     }
 
+    .gradient_name{
+        background: ${({theme: {theme}}) => theme === ThemeList.light ? '-webkit-linear-gradient(#00b09b, #96c93d)' : '-webkit-linear-gradient(#80ff72, #7EE8FA)'};
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
     .typed{
         font-size: 2rem;
         line-height: 1.4em;
@@ -84,14 +90,14 @@ function Hero() {
         <div className="container">
             <div className="hero_wrapper">
                 <div className="hero_info">
-                    <h1 className="hero_title">Hi! I'm Riz.</h1>
+                    <h1 className="hero_title">Hi! I'm <span className="gradient_name">Riz.</span></h1>
                     <div className='typed'>
                         <Typed className="typed-text" strings={['// I study computer science and commerce.']} 
                         typeSpeed={120} backSpeed={140} onComplete={(self) => self.cursor.remove()} />
                         <div className='secLine'>
                             <Typed strings={['// I am a ']} typeSpeed={120} backSpeed={140} 
                             startDelay={7000} showCursor={false}/>
-                            <Typed className="iam" strings={['coder.', 'tech enthusiast.', 'studio ghibli connoisseur', 'rice alternative :)']} 
+                            <Typed className="iam" strings={['coder.', 'tech enthusiast.', 'software team lead.', 'studio ghibli connoisseur', 'rice alternative :)']} 
                             typeSpeed={120} backSpeed={140} startDelay={8500} loop/>
                         </div>
                     </div>
