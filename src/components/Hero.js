@@ -97,7 +97,7 @@ function Hero() {
                         <div className='secLine'>
                             <Typed strings={['// I am a ']} typeSpeed={120} backSpeed={140} 
                             startDelay={7000} showCursor={false}/>
-                            <Typed className="iam" strings={['coder.', 'tech enthusiast.', 'software team lead.', 'studio ghibli connoisseur', 'rice alternative :)']} 
+                            <Typed className="iam" strings={['coder.', 'tech enthusiast.', 'software team lead.', 'studio ghibli connoisseur.', 'rice alternative :)']} 
                             typeSpeed={120} backSpeed={140} startDelay={8500} loop/>
                         </div>
                     </div>

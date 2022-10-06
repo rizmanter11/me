@@ -30,7 +30,7 @@ const projects = [
     id: uuidv4(),
     name: 'Minesweeper',
     desc:
-      'A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.',
+      'A current low level implementation of minesweeper that runs on command-line. Uses recursive algorithm to uncover board after every choice and display board with numbers indicating neighbours that are bombs.',
     img: MineSwImg,
   },
 ];
