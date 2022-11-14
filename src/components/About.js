@@ -70,7 +70,7 @@ function About() {
       <div className="container">
         <div className="about_wrapper">
           <div className="about_img">
-            <img src={AboutImg} alt="Me doing some fun stuff :)"/>
+            <img src={AboutImg} alt="Me doing some fun stuff :)" loading="lazy"/>
           </div>
           <div className="about_info">
             <p className='about_subtitle'>Let me introduce myself</p>
