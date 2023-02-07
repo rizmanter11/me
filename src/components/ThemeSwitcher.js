@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
-import { FiMoon, FiSun} from 'react-icons/fi'
-import styled from 'styled-components'
+import React, { useContext } from 'react';
+import { FiMoon, FiSun} from 'react-icons/fi';
+import styled from 'styled-components';
 import ThemeContext from '../contexts/ThemeContext';
 import ThemeList from '../data/ThemeList';
 

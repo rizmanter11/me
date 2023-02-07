@@ -88,6 +88,7 @@ function ContactPage() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // eslint-disable-next-line
     const email_reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const email_data = e.target[1].value;
 

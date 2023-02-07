@@ -49,6 +49,8 @@ const FaqItemStyles = styled.div`
 
     &:hover{
         background-color: var(--mediumSlateGreen);
+        transition-timing-function: ease-in-out;
+        transition-delay: 0.07s;
         .faq_icon{
             background-color: var(--lightGreen_1);
             color: var(--mediumSlateGreen);
