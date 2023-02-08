@@ -60,7 +60,7 @@ function Footer() {
     <FooterStyles>
         <div className="container">
             <div className="footer_wrapper">
-                <NavLink to="/me">
+                <NavLink to="/">
                     <img className="footer_logo" src={rmlogo} alt="RM-LOGO"/>
                 </NavLink>
                 <div className="footer_links">

@@ -1,7 +1,6 @@
 {
   "name": "rmwebsite",
   "version": "0.1.0",
-  "homepage": "https://rizmanter11.github.io/me",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
