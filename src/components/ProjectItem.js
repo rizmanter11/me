@@ -19,6 +19,7 @@ const ProjectItemStyles = styled.div`
         background-color: ${({theme: {theme}}) => theme === ThemeList.light ? '#e1ede8' : '#1E1E1E'};
         padding: 1rem;
         border-radius: 12px;
+        height: 210px;
     }
     .projectItem_title {
         font-size: 2.2rem;
@@ -27,7 +28,7 @@ const ProjectItemStyles = styled.div`
     .projectItem_desc {
         font-size: 1.6rem;
         margin-top: 1rem;
-        text-align: left;
+        text-align: center;
         color: ${({theme: {theme}}) => theme === ThemeList.light ? 'var(--darkGreen_2)' : 'var(--lightGreen_1)'};
     }
     @media only screen and (max-width: 768px) {
@@ -37,14 +38,14 @@ const ProjectItemStyles = styled.div`
     }
 `;
 
-function ProjectItem({img, title, desc}) {
+function ProjectItem({img, title, desc, link}) {
   return (
     <ProjectItemStyles>
-        <a href="#projects" className='projectItem_img'>
+        <a href={link} className='projectItem_img'>
             <img src={img} alt="project img" />
         </a>
         <div className="projectItem_info">
-            <a href="#projects">
+            <a href={link}>
                 <h3 className='projectItem_title'>{title}</h3>
             </a>
             <p className="projectItem_desc">{desc}</p>

@@ -75,8 +75,8 @@ function About() {
           <div className="about_info">
             <p className='about_subtitle'>Let me introduce myself</p>
             <h3 className="about_title">About Me!</h3>
-            <p className='about_desc'>Hello, my name is Riz Manter and I'm a Penultimate Year student at UNSW. 
-              I am an aspiring Software Developer with hands on experience in front and back-end development.
+            <p className='about_desc'>Hello, my name is Riz Manter and I'm a Final Year student at UNSW.
+              I am an aspiring Graduate Software Engineer with hands on experience in front and back-end development.
               I love hiking, especially with friends and can be seen watching Studio Ghibli movies occasionally.
             </p>
             <PrimaryButton buttonType={NavLink} to="/about">Read More</PrimaryButton>

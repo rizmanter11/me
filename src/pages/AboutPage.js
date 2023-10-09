@@ -88,16 +88,16 @@ function AboutPage() {
               <h3 className="about_heading">More About Me...</h3>
               <div className="about_info">
                 <p>
-                  Hello, as you've probably read a million times now my name is Riz Manter and I'm a Penultimate Year student at UNSW. 
-                  I am an aspiring Software Developer with hands on experience in front and 
+                  Hello, as you've probably read a million times now my name is Riz Manter and I'm a Final Year student at UNSW. 
+                  I am an aspiring Graduate Software Engineer with hands on experience in front and 
                   back-end development, supported by a solid foundation of theoretical knowledge. 
                   This passion has been cultivated from a young age where I had a love for ideas 
                   and problem solving. This has transferred into an avidity for technology, 
                   motivation to work and engage in teams to solve the worlds current and upcoming 
                   problems.
                   <br/> <br/>
-                  I am a current Computer Science and Commerce student at UNSW graduating at the end 
-                  of 2023. Most of my programming experience lies with C, Java, Python and Javascript. 
+                  I recently graduated with a Computer Science and Commerce degree from UNSW.
+				  Most of my programming experience lies with C, Java, Python and Javascript. 
                   Although I have engaged with databases, networks, OO design and functional programming, 
                   I am always keen to step outside my comfort zone.
                 </p>
